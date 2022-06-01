@@ -1,1 +1,10 @@
-export class Transaction {}
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+
+@Entity()
+export class Transaction {
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
+  value: number;
+}
